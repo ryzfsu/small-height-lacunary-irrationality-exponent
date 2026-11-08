@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "The irrationality exponent of small-height lacunary series"
+authors:
+  - family-names: Zhang
+    given-names: Ruiyi
+    affiliation: Independent Researcher
+doi: 10.5281/zenodo.24056144
+url: "https://doi.org/10.5281/zenodo.24056144"
+date-released: 2026-11-08
+preferred-citation:
+  type: article
+  title: "The irrationality exponent of small-height lacunary series"
+  authors:
+    - family-names: Zhang
+      given-names: Ruiyi
+      affiliation: Independent Researcher
+  year: 2026
+  publisher:
+    name: Zenodo
+  doi: 10.5281/zenodo.24056144
+  url: "https://doi.org/10.5281/zenodo.24056144"

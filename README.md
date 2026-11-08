@@ -2,6 +2,8 @@
 
 Ruiyi Zhang
 
+DOI: [10.5281/zenodo.24056144](https://doi.org/10.5281/zenodo.24056144)
+
 ## Main result
 
 Let N >= 2 be an integer, let u_1 < u_2 < ... be positive integers with liminf u_{j+1}/u_j >= 2, and let
@@ -32,3 +34,19 @@ uniform bound at the boundary liminf u_{j+1}/u_j = 2, including ratios that tend
     pdflatex main.tex && pdflatex main.tex && pdflatex main.tex
 
 Built with TeX Live 2026.
+
+## Citation
+
+Ruiyi Zhang, *The irrationality exponent of small-height lacunary series*, preprint, Zenodo, 2026. https://doi.org/10.5281/zenodo.24056144
+
+```bibtex
+@misc{zhang2026smallheight,
+  author    = {Zhang, Ruiyi},
+  title     = {The irrationality exponent of small-height lacunary series},
+  year      = {2026},
+  publisher = {Zenodo},
+  note      = {Preprint},
+  doi       = {10.5281/zenodo.24056144},
+  url       = {https://doi.org/10.5281/zenodo.24056144}
+}
+```
