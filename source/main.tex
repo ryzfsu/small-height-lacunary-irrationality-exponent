@@ -1,0 +1,868 @@
+\documentclass{amsart}
+\usepackage{amssymb,mathtools}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The irrationality exponent of small-height lacunary series},pdfauthor={Ruiyi Zhang}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}[section]
+\numberwithin{equation}{section}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\den}{\operatorname{den}}
+
+\begin{document}
+
+\title[Small-height lacunary series]{The irrationality exponent of small-height lacunary series}
+\author{Ruiyi Zhang}
+\address{Independent Researcher, Columbia, Maryland, USA}
+\email{ryzfsu@gmail.com}
+\subjclass[2020]{Primary 11J82; Secondary 11J70, 11B83}
+\keywords{irrationality exponent, lacunary series, rational height, continued fraction, folding}
+
+\begin{abstract}
+Let $N\ge2$ be an integer, let $u_1<u_2<\cdots$ be positive
+integers with $\liminf u_{j+1}/u_j\ge2$, and let $\lambda_j$ be
+nonzero rational numbers with $\log H(\lambda_j)=o(u_j)$.
+Then $x=\sum_{j\ge1}\lambda_jN^{-u_j}$ is irrational and its
+irrationality exponent is $\limsup u_{j+1}/u_j$, finite or infinite.
+The proof compares logarithmic gaps between the continued-fraction
+denominators of consecutive truncations. A perturbation lemma places
+each gap of the next truncation in at least one of five classes (bounded,
+inherited, central, short, reflected), each with an explicit error. Reflection
+moves a large gap far enough to the right to give a uniform bound at
+the boundary $\liminf u_{j+1}/u_j=2$.
+The coefficient condition allows arbitrary signs and cannot be
+replaced by $\log H(\lambda_j)\le C_*u_j$ for any fixed $C_*>0$.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+For an irrational real number $\xi$, its irrationality exponent is
+\[
+\mu(\xi)=\sup\left\{\nu\in\R:
+\left|\xi-\frac pq\right|<q^{-\nu}
+\text{ for infinitely many }(p,q)\in\Z\times\Z_{>0}\right\}.
+\]
+For a nonzero rational number written in lowest terms, put
+\begin{equation}\label{eq:height}
+H(a/b)=\max(|a|,b),\qquad a\in\Z\setminus\{0\},\quad
+b\in\Z_{>0},\quad \gcd(a,b)=1.
+\end{equation}
+For $y\in\Q$, let $\den(y)$ denote its positive reduced denominator.
+All logarithms are natural.
+
+\begin{theorem}\label{thm:main}
+Let $N\ge2$ be an integer, let $u_1<u_2<\cdots$ be positive
+integers, and let $\lambda_j\in\Q\setminus\{0\}$ satisfy
+\[
+\log H(\lambda_j)=o(u_j),
+\]
+and suppose that
+\[
+\liminf_{j\to\infty}\frac{u_{j+1}}{u_j}\ge2.
+\]
+Then the absolutely convergent series
+\[
+x=\sum_{j\ge1}\lambda_jN^{-u_j}
+\]
+is irrational and
+\begin{equation}\label{eq:main}
+\mu(x)=\limsup_{j\to\infty}\frac{u_{j+1}}{u_j}.
+\end{equation}
+Both sides lie in $[2,+\infty]$.
+\end{theorem}
+
+The ratios need not converge. For example, integer exponent sequences
+with repeating ratio patterns $(2,2,3)$ and $(2,5/2)$ give exponents
+$3$ and $5/2$, respectively. Ratios may fall below $2$ by a quantity
+tending to zero. The coefficients may have either sign; any sequence
+from a finite subset of $\Q\setminus\{0\}$ is allowed. The binary specialization
+$u_j=2^{j-1}$ of Theorem~\ref{thm:main} is the main theorem of
+\cite{Zh}, proved there with Hankel determinants and Pad\'e approximants;
+the present proof uses a different argument based on regular continued
+fractions, and the sharpness examples of Section~9 follow Section~6 of
+that paper.
+
+For an integer base $b\ge2$ and a strictly increasing sequence of
+positive integers $(n_j)$ with $n_{j+1}/n_j\ge2$ for all large $j$, the formula
+$\mu(\sum_j b^{-n_j})=\limsup n_{j+1}/n_j$ for unit coefficients is a
+classical consequence of folding, recorded in Bugeaud, Krieger and Shallit
+\cite{BKS} with attribution there to Bugeaud \cite{Bu08}. Bugeaud \cite[Theorem~7.21]{Bu12} gives a result on prescribed
+irrationality exponents for a specific family in the middle-third Cantor set.
+The explicit Cantor-set family in Bugeaud \cite[Theorem~2]{Bu08} consists,
+up to a fixed rational factor, of special cases of the unit-weight part of
+Theorem~\ref{thm:main}.
+Theorem~\ref{thm:main} also treats small rational weights and permits ratios
+tending to $2$ from below.
+Continued-fraction expansions of lacunary series appear in Shallit
+\cite{Sh79,Sh82}. The reversal used here is
+related to the folding identities of Mend\`es France \cite{MF}
+and van der Poorten and Shallit \cite{vPS}.
+
+Duverney, Kurosawa and Shiokawa \cite[Theorem~1]{DKS} give an
+irrationality-exponent formula for series
+$\sum_j\sigma_j/X_j$, where $\sigma_j\in\{-1,1\}$,
+$X_j>1$ are rational, and $X_{j+1}\ge X_j^2$ eventually. Write $T_j$
+for their auxiliary sequence of positive integers, defined by
+\begin{equation}\label{eq:DKS}
+T_1=\den(X_1),\qquad
+T_{j+1}=T_j^2\den(X_{j+1}/X_j^2).
+\end{equation}
+The additional hypothesis is
+$\log T_{j+1}=o(\log X_j)$.
+Their conclusion is
+\begin{equation}\label{eq:DKSconclusion}
+\mu\!\left(\sum_j\frac{\sigma_j}{X_j}\right)
+=\limsup_j\frac{\log X_{j+1}}{\log X_j}.
+\end{equation}
+For $\lambda_j\in\{-1,1\}$ and $u_{j+1}\ge2u_j$ eventually, discard
+a finite prefix and take $X_j=N^{u_j}$. Then $X_{j+1}/X_j^2$ is an
+integer and $T_j=1$, so the DKS formula gives \eqref{eq:main}, including
+the case of exact ratio $2$.
+
+For the following comparison with arbitrary rational weights, assume\linebreak
+$\limsup u_{j+1}/u_j<\infty$, so that $u_{j+1}=O(u_j)$. In the subcase
+$\liminf u_{j+1}/u_j>2$, discard finitely many terms and take
+$X_j=N^{u_j}/|\lambda_j|$ and $\sigma_j=\operatorname{sgn}(\lambda_j)$.
+The height hypothesis makes $\log X_j$ asymptotic to $u_j\log N$, so
+$X_j>1$ eventually and the logarithmic ratios have the same limsup as the
+exponent ratios. The strict lower-ratio margin then gives
+$X_{j+1}\ge X_j^2$ eventually. The local logarithmic denominator costs are
+$o(u_j)$: if
+$\lambda_j=\alpha_j/\beta_j$ in lowest terms, then
+\[
+\den(X_{j+1}/X_j^2)\le |\alpha_{j+1}|\beta_j^2.
+\]
+Put $h_j=\log H(\lambda_j)/u_j$, so $h_j\to0$.
+Since $u_{j+1}\ge(2+\varepsilon_*)u_j$ eventually
+for some $\varepsilon_*>0$, the fixed initial denominator cost is negligible
+after normalization, and the normalized later costs are bounded by a
+convergent geometric sum. Their accumulation with weights $2^{j-i}$, $i\le j$, is
+therefore still $o(u_j)$, giving $\log T_{j+1}=o(\log X_j)$ as required by DKS.
+Adding back the omitted rational prefix does not change the irrationality
+exponent. The case of an infinite limsup follows from the truncations alone
+(Section~\ref{sec:arithmetic}).
+Amou and Bugeaud \cite[Lemma~3]{AB} give a related criterion.
+In notation local to this paragraph, let $\widehat A_n$ be strictly increasing
+positive integers, let $\widehat B_n$ be nonzero integers, and let
+$\widehat\tau=\limsup\log \widehat A_{n+1}/\log \widehat A_n$ be finite and at least two.
+Their local condition is
+\[
+\frac{\widehat A_{n+1}/|\widehat B_{n+1}|}{(\widehat A_n/|\widehat B_n|)^2}\ge2
+\quad\text{eventually},
+\]
+where $\widehat S_n=(\widehat A_{n+1}/|\widehat B_{n+1}|)/(\widehat A_n/|\widehat B_n|)^2$
+denotes the left-hand side. Let
+$\widehat d_n=\den(\widehat S_n)$, $\widehat d_0=|\widehat B_1|$, and
+\[
+\widehat D_n=\prod_{i=0}^n \widehat d_i^{2^{n-i}}.
+\]
+Their remaining conditions are $|\widehat B_n|=\widehat A_n^{o(1)}$ and
+$\widehat D_n=\widehat A_n^{o(1)}$. Under these conditions, the irrationality exponent of
+the series with terms $\widehat B_n/\widehat A_n$ equals $\widehat\tau$.
+In the proof of their Theorem~2, Amou and Bugeaud \cite[Section~5]{AB}
+state that there exists a sequence of ratios greater than $2$ with lower
+limit $2$ for which Lemma~3 applies to their construction; the omitted
+details concern the cumulative denominator condition
+$\widehat D_n=\widehat A_n^{o(1)}$.
+
+At the boundary $\liminf u_{j+1}/u_j=2$, for the choice
+$X_j=N^{u_j}/|\lambda_j|$ above, the height hypothesis alone
+does not imply $\log T_{j+1}=o(\log X_j)$: weighting local costs by
+$2^{j-i}$ can leave a nonnegligible contribution. Also, with this choice,
+a step $u_{j+1}<2u_j$ gives $X_{j+1}<X_j^2$ for unit coefficients.
+Theorem~\ref{thm:main} includes arbitrary rational weights of the stated
+height at this boundary and permits such steps below $2$.
+
+The proof uses only regular continued fractions and rational arithmetic. The
+continued fraction of one
+truncation need not be a prefix of that of the next, so a perturbation
+lemma controls each gap separately. The reflection estimate gives a lower
+bound for the rightward displacement of a large gap in terms of its old
+width. At the boundary ratio $2$ there is no margin, and this shift takes
+its place. For the infinite continued fraction, each gap gets its own
+truncation, chosen so that the accumulated finite-stage error stays
+logarithmic.
+
+\section{Continued-fraction facts}
+
+For a nonintegral rational number we use its canonical finite regular
+continued fraction, whose last partial quotient is at least $2$. For an
+integer, the canonical expansion consists of that integer alone.
+For irrational numbers we use infinite regular continued fractions.
+Convergents are indexed from zero and written with positive denominators;
+the auxiliary pair with denominator zero is not counted as a convergent.
+A convergent preceding the terminal rational is called nonterminal.
+
+If $p/q$ is a nonterminal convergent of a real number $\theta$ and
+the next convergent has denominator $q^+$, then
+\begin{equation}\label{eq:CFerror}
+\frac1{q(q^++q)}\le\left|\theta-\frac pq\right|
+\le\frac1{qq^+}.
+\end{equation}
+They also hold for rational $\theta$ with its canonical finite
+expansion. We use Legendre's criterion in both cases:
+if $p/q$ is reduced and
+\begin{equation}\label{eq:Legendre}
+\left|\theta-\frac pq\right|<\frac1{2q^2},
+\end{equation}
+then $p/q$ is a convergent of $\theta$. If $\theta$ is rational and
+the error is nonzero, it is nonterminal. For a nonintegral rational $\theta$, let $q_{m-1}$ and $q_m$ be the
+penultimate and final denominators in its canonical expansion.
+The strict inequality rules out the penultimate convergent of the alternative
+expansion ending in $1$: its denominator is $q_m-q_{m-1}$ and
+its error is $1/(q_m(q_m-q_{m-1}))$, so the strict threshold cannot
+hold when the canonical last partial quotient is at least $2$.
+For integral $\theta$, a distinct rational with positive denominator has
+error at least the reciprocal of that denominator, so the strict criterion
+can hold only at $\theta$ itself. For irrational $\theta$ every convergent
+is nonterminal.
+
+A \emph{logarithmic gap} is a pair
+$a=\log q$, $b=\log q^+$ from consecutive convergent denominators;
+its width is $g=b-a$. A possible initial equality $q=q^+=1$ is
+allowed.
+
+\section{Reversing a finite denominator profile}
+
+Let
+\[
+\alpha=\frac PV=[a_0;a_1,\ldots,a_m],\qquad V\ge2,
+\]
+be canonical. Write its convergent denominators as
+$q_{-1}=0,q_0=1,\ldots,q_m=V$, and put
+\[
+V'=q_{m-1},\qquad
+w_0=\frac{V'}V=[0;a_m,a_{m-1},\ldots,a_1],\qquad M=\log V.
+\]
+
+\begin{lemma}\label{lem:reversal}
+For every logarithmic gap $\log s\to\log S$ in the canonical
+finite continued fraction of $w_0$, there is a logarithmic gap
+$c\to d$ of $\alpha$ such that
+\begin{equation}\label{eq:reversal}
+|\log s-(M-d)|\le\log2,\qquad
+|\log S-(M-c)|\le\log2.
+\end{equation}
+In particular, $0\le c\le d\le M$.
+\end{lemma}
+
+\begin{proof}
+Let $r_i$, $0\le i\le m$, be the denominators in the displayed
+reversed expansion before a possible canonical merge, which is treated at
+the end. Thus $r_0=1$
+and $r_m=V$. Continuant symmetry and the splitting identity give
+\[
+V=q_jr_{m-j}+q_{j-1}r_{m-j-1}\qquad(0\le j\le m),
+\]
+where $r_{-1}=0$. Both denominator sequences are nondecreasing, so
+\begin{equation}\label{eq:continuantbounds}
+\frac{V}{2q_j}\le r_{m-j}\le\frac V{q_j}.
+\end{equation}
+Hence the gap $r_i\to r_{i+1}$ corresponds to
+$q_{m-i-1}\to q_{m-i}$, with the errors in \eqref{eq:reversal}.
+
+If $a_1\ge2$, the reversed expansion is canonical. If $a_1=1$,
+its canonical form merges the final $1$ and removes only $r_{m-1}$.
+The two final gaps merge into $r_{m-2}\to r_m=V$, which corresponds to
+$q_1\to q_2$; all earlier gaps retain the preceding correspondence. Since
+$q_1=1$, its upper endpoint
+is exactly $M-\log q_1$, and its lower endpoint satisfies
+\eqref{eq:continuantbounds} with $j=2$. The case $m=1,a_1=1$
+is excluded by $V\ge2$.
+\end{proof}
+
+\section{A rational perturbation lemma}
+
+Let $\alpha=P/V$ be reduced with $V\ge2$, and let
+$\beta=\alpha+\delta$ with $\delta\in\Q\setminus\{0\}$.
+Put
+\begin{equation}\label{eq:perturbparameters}
+\Delta=|\delta|,\qquad M=\log V,\qquad L=-\log\Delta,
+\qquad W=\frac1{V^2\Delta}=e^{L-2M}.
+\end{equation}
+Let $P'/V'$ be the penultimate convergent in the canonical expansion
+of $\alpha$, and write
+\begin{equation}\label{eq:inversecoordinate}
+\sigma=PV'-P'V\in\{1,-1\},\qquad
+\zeta=-\frac{\sigma}{V^2\delta}.
+\end{equation}
+Put $B=\den(\zeta)$ and $E=\log(4B)$. So $B\ge1$, $|\zeta|=W$, and
+$\zeta$ may be negative.
+
+\begin{lemma}\label{lem:perturbation}
+Let $p/q$ be a nonterminal convergent of $\beta$ with next denominator
+$q^+$. Put
+\[
+\varepsilon=|\beta-p/q|>0,\qquad \pi_q=q^+/q,\qquad
+a=\log q,\quad b=\log q^+,\quad g=b-a.
+\]
+At least one of the following alternatives holds.
+\begin{enumerate}
+\item \textbf{Bounded.} $\pi_q\le6$, so $g\le\log6$.
+\item \textbf{Inherited.} $p/q\ne\alpha$ is a nonterminal convergent of $\alpha$ whose next
+denominator $U$ satisfies $U\ge q^+/6$. In particular,
+the new gap has the same left endpoint $a=\log q$, and
+\begin{equation}\label{eq:inherited}
+g\le\log U-\log q+\log6.
+\end{equation}
+\item \textbf{Central.} $p/q=\alpha$, so $q=V$ and
+\begin{equation}\label{eq:central}
+g\le L-2M.
+\end{equation}
+\item \textbf{Short.} One has
+\begin{equation}\label{eq:short}
+g\le\log12+2\log B\le2E,\qquad
+a\ge L-M-\log(3/2).
+\end{equation}
+\item \textbf{Reflected.} There is an old logarithmic gap $c\to d$ of $\alpha$ such that
+\begin{align}
+|a-(L-d)|&\le E,\qquad |b-(L-c)|\le E,\label{eq:reflected}\\
+\intertext{and}
+a&\ge L-M-\log(3/2).\label{eq:reflectedlocation}
+\end{align}
+\end{enumerate}
+No lower bound on $W$ is assumed.
+\end{lemma}
+
+\begin{proof}
+Suppose $\pi_q>6$. If $\varepsilon\ge\Delta/2$, then
+\begin{equation}\label{eq:oldlegendre}
+\left|\alpha-\frac pq\right|
+\le\varepsilon+\Delta\le3\varepsilon
+\le\frac3{qq^+}<\frac1{2q^2}.
+\end{equation}
+If $p/q=\alpha$, then $q=V$ and $\varepsilon=\Delta$.
+Equation~\eqref{eq:CFerror} gives $q^+\le1/(V\Delta)=VW$,
+which is the central alternative. Otherwise, $p/q$ is reduced and differs
+from $\alpha$, so Legendre's criterion gives a nonterminal convergent of
+$\alpha$. Its next denominator $U$ satisfies
+\[
+\frac1{q(U+q)}\le\frac3{qq^+},\qquad
+U\ge q^+/3-q\ge q^+/6,
+\]
+giving the inherited alternative.
+
+Now suppose $\varepsilon<\Delta/2$. With $w_0=V'/V$, define the local coordinate $t=\zeta-w_0$. Direct calculation gives
+\begin{equation}\label{eq:mobius}
+\beta=\frac{Pt+P'}{Vt+V'},\qquad Vt+V'=V\zeta.
+\end{equation}
+Signs of $\zeta$ and $t$ are arbitrary.
+For $f(w)=(Pw+P')/(Vw+V')$, the M\"obius difference formula is
+\[
+f(t)-f(w)=\frac{\sigma(t-w)}{(Vt+V')(Vw+V')}.
+\]
+Define integers $h,k$ by
+\begin{equation}\label{eq:inversepair}
+\binom pq=\begin{pmatrix}P&P'\\V&V'\end{pmatrix}\binom hk
+\end{equation}
+The matrix is unimodular, so $h$ and $k$ are coprime. Here $k\ne0$:
+otherwise \eqref{eq:inversepair} would give $p/q=\alpha$, contrary to
+the present error assumption. Moreover,
+\[
+k=\sigma(Pq-Vp),\qquad
+K:=|k|=Vq\left|\alpha-\frac pq\right|.
+\]
+The second row of \eqref{eq:inversepair} gives $V(h/k)+V'=q/k$.
+Substituting $w=h/k$ in the M\"obius difference formula gives an exact
+expression for $|t-h/k|$, valid for either sign of $k$ and $\zeta$.
+The assumption $\varepsilon<\Delta/2$ gives
+\begin{equation}\label{eq:Kbounds}
+\frac{q}{2VW}\le K\le\frac{3q}{2VW}.
+\end{equation}
+Since $K$ is a positive integer, $K\ge1$, so
+\begin{equation}\label{eq:qafter}
+q\ge\frac23VW.
+\end{equation}
+This is the bound on $a$ in the short and reflected alternatives.
+
+Write $r=\zeta-h/k=y/s$ in reduced form with $s>0$.
+Comparing the denominators of $\zeta$, $h/k$ and $r$ gives
+\begin{equation}\label{eq:sbound}
+K/B\le s\le BK.
+\end{equation}
+The bound $s\le BK$ comes from the definition of $r$, and
+$K\le Bs$ from $h/k=\zeta-r$; signs do not matter.
+The unimodular difference identity from
+\eqref{eq:mobius}--\eqref{eq:inversepair} gives the local error $\omega_0$:
+\begin{equation}\label{eq:inverseerror}
+\omega_0:=|w_0-r|=\left|t-\frac hk\right|
+=\frac{\varepsilon qVW}{K}>0.
+\end{equation}
+If $\pi_q\le12B^2$, the short alternative holds. Otherwise,
+\begin{equation}\label{eq:inverselegendre}
+\omega_0s^2\le B^2\varepsilon qVWK
+\le\frac32B^2\varepsilon q^2
+\le\frac{3B^2}{2\pi_q}<\frac18.
+\end{equation}
+Legendre's criterion makes $r$ a nonterminal convergent of $w_0$.
+Let $S$ be its next denominator. Equation~\eqref{eq:CFerror} yields
+\[
+\frac1{s\omega_0}-s\le S\le\frac1{s\omega_0},\qquad
+\frac1{2s\omega_0}\le S\le\frac1{s\omega_0},
+\]
+where the second lower bound uses $\omega_0s^2<1/8$.
+Equations~\eqref{eq:CFerror} and
+\eqref{eq:Kbounds}--\eqref{eq:inverseerror} now give
+\begin{equation}\label{eq:reflecteddenominators}
+\frac{q}{2BVW}\le s\le\frac{2Bq}{VW},\qquad
+\frac{q^+}{2BVW}\le S\le\frac{2Bq^+}{VW}.
+\end{equation}
+For the second pair, use
+\[
+\frac1{s\omega_0}=\frac{K}{s\varepsilon qVW},\qquad
+1/B\le K/s\le B,\qquad
+q^+\le\frac1{\varepsilon q}\le q^++q.
+\]
+Since $\log(VW)=L-M$, \eqref{eq:reflecteddenominators} implies
+\begin{equation}\label{eq:shiftedprofile}
+\begin{aligned}
+|\log s-[a-(L-M)]|&\le\log(2B),\\
+|\log S-[b-(L-M)]|&\le\log(2B).
+\end{aligned}
+\end{equation}
+Apply Lemma~\ref{lem:reversal} to the gap $s\to S$.
+The combined endpoint error is at most
+$\log(2B)+\log2=E$, giving \eqref{eq:reflected}.
+\end{proof}
+
+For a reflected gap with old width $g_0=d-c$,
+\eqref{eq:reflected} gives
+\begin{equation}\label{eq:widthandgain}
+g\le g_0+2E,\qquad a-c\ge(L-2M)+g_0-E.
+\end{equation}
+For the second, use $d\le M$ and
+$a-c\ge L-d-c-E=L-2d+g_0-E$.
+When $L=2M+o(M)$, the second inequality bounds the rightward shift
+$a-c$ from below by the old width $g_0$, up to the error terms.
+
+\section{Arithmetic of the truncations}\label{sec:arithmetic}
+
+Write $\lambda_j=\alpha_j/\beta_j$ in reduced form with $\beta_j>0$,
+and put
+\begin{equation}\label{eq:truncations}
+t_n=u_n\log N,\qquad
+x_n=\sum_{j\le n}\lambda_jN^{-u_j}=\frac{P_n}{V_n}
+\end{equation}
+in reduced form with $V_n>0$. The ratio assumption gives a fixed lower
+ratio $\rho>1$ for all large indices, for example $\rho=3/2$.
+The height hypothesis and geometric growth imply
+\begin{equation}\label{eq:heightaccumulation}
+\sum_{j\le n}\log H(\lambda_j)=o(u_n).
+\end{equation}
+Fix $\eta>0$. After an index depending on $\eta$, each summand is at
+most $\eta u_j$, and
+$u_j\le u_n\rho^{-(n-j)}$ there. Sum this geometric bound
+and let $\eta$ tend to zero.
+
+Set
+\[
+D_n=\prod_{j\le n}\beta_j,\qquad
+S_n=\sum_{j\le n}\alpha_j(D_n/\beta_j)N^{u_n-u_j}.
+\]
+Then $x_n=S_n/(N^{u_n}D_n)$ and $\log D_n=o(u_n)$.
+For every prime $p\mid N$, each summand of $S_n$ before the last
+is divisible by $p^{v_p(N)(u_n-u_{n-1})}$. The last is
+$\alpha_nD_{n-1}$,
+whose valuation is $o(u_n)$ by \eqref{eq:heightaccumulation}.
+Since $u_n-u_{n-1}\ge(1-1/\rho)u_n$ eventually, the last summand
+has strictly smaller valuation. Hence eventually
+\begin{equation}\label{eq:valuation}
+v_p(S_n)=v_p(\alpha_nD_{n-1})=o(u_n).
+\end{equation}
+Since $N$ has only finitely many prime divisors, the valuation estimates
+hold simultaneously after increasing the initial index. So $S_n\ne0$.
+If $G_n=\gcd(S_n,N^{u_n}D_n)$,
+the part supported outside the primes dividing $N$ is at most $D_n$,
+and \eqref{eq:valuation} bounds the remaining part by $\exp(o(u_n))$.
+Consequently,
+\begin{equation}\label{eq:reduceddenominator}
+\log G_n=o(u_n),\qquad
+V_n=\frac{N^{u_n}D_n}{G_n},\qquad
+M_n:=\log V_n=t_n+o(t_n).
+\end{equation}
+
+The first omitted term dominates the rest of the tail, giving
+\begin{equation}\label{eq:tail}
+x-x_n=\lambda_{n+1}N^{-u_{n+1}}(1+o(1)),\qquad
+-\log|x-x_n|=t_{n+1}+o(t_{n+1}).
+\end{equation}
+For this and for absolute convergence, choose
+$0<\tau<\log N\,(\rho-1)/(\rho+1)$ and use
+$e^{-\tau u_j}\le|\lambda_j|\le e^{\tau u_j}$ at all late
+indices. For every $k\ge n+1$ the ratio of successive absolute terms
+is at most
+\[
+\exp\!\left(-[\rho(\log N-\tau)-(\log N+\tau)]u_k\right).
+\]
+So the rest of the tail is exponentially small relative to the first
+omitted term, and the tail is eventually nonzero.
+
+If $x=a'/b'$ were rational, its nonzero difference from $x_n$
+would be at least $1/(b'V_n)$, contrary to
+\eqref{eq:reduceddenominator}--\eqref{eq:tail} and the eventual
+lower ratio $\rho>1$. Thus $x$ is irrational, and its truncations give
+\begin{equation}\label{eq:lowerbound}
+\mu(x)\ge\limsup_{n\to\infty}\frac{u_{n+1}}{u_n}.
+\end{equation}
+By \eqref{eq:reduceddenominator}, $V_n\to\infty$, so the truncations
+give infinitely many distinct rational approximants. Their approximation exponents are
+$t_{n+1}(1+o(1))/(t_n(1+o(1)))$. An infinite limsup gives
+\eqref{eq:main} at once.
+
+For the rest of the proof assume
+\begin{equation}\label{eq:finiteR}
+F:=\limsup_{n\to\infty}\frac{u_{n+1}}{u_n}<\infty.
+\end{equation}
+Thus $F\ge2$ and $u_{n+1}=O(u_n)$. Apply
+Lemma~\ref{lem:perturbation} to
+\[
+\delta_n=x_{n+1}-x_n=\lambda_{n+1}N^{-u_{n+1}},\qquad
+L_n=-\log|\delta_n|.
+\]
+Here the application has $\alpha=x_n$, $\beta=x_{n+1}$, $\delta=\delta_n$, so that $M=M_n$, $L=L_n$, $\zeta=\zeta_n$ and $B=B_n$.
+The absolute value of the signed coordinate $\zeta_n$ is
+\[
+\frac1{V_n^2|\delta_n|}
+=\frac{\beta_{n+1}G_n^2N^{u_{n+1}-2u_n}}
+{|\alpha_{n+1}|D_n^2}.
+\]
+Writing $B_n=\den(\zeta_n)$, reduction can only decrease the denominator,
+so
+\begin{equation}\label{eq:coordinatecost}
+B_n\le|\alpha_{n+1}|D_n^2N^{(2u_n-u_{n+1})_+}.
+\end{equation}
+The coefficient cost is $o(u_n)$ by \eqref{eq:finiteR}, and
+$(2u_n-u_{n+1})_+=o(u_n)$ by the lower ratio hypothesis. Thus
+\begin{equation}\label{eq:Bsmall}
+\log B_n=o(M_n).
+\end{equation}
+This includes the steps with $u_{n+1}<2u_n$.
+Finally,
+\begin{equation}\label{eq:Lscales}
+L_n=t_{n+1}+o(t_n),\qquad
+\liminf\frac{L_n}{M_n}\ge2,\qquad
+\limsup\frac{L_n}{M_n}=F.
+\end{equation}
+So the negative part of $L_n-2M_n$ is $o(M_n)$.
+
+\section{A uniform finite profile bound}\label{sec:uniform}
+
+In this section $F<\infty$; the case $F=+\infty$ follows from
+\eqref{eq:lowerbound}.
+Fix
+\begin{equation}\label{eq:kappa}
+\kappa>F-2.
+\end{equation}
+In particular, $\kappa>0$, also when $F=2$.
+Put $C=\log6$. There are $n_0$ and $A\ge\log6$, depending on
+$\kappa$ and the series, such that every logarithmic gap $a\to b$ of every $x_n$,
+$n\ge n_0$, satisfies
+\begin{equation}\label{eq:uniformprofile}
+b-a\le\kappa a+A+C(n-n_0).
+\end{equation}
+
+Put $E_n=\log(4B_n)$. By \eqref{eq:Bsmall}--\eqref{eq:Lscales}
+there is a sequence $\eta_n\to0$ such that
+\begin{equation}\label{eq:tolerance}
+\begin{gathered}
+-\eta_nM_n\le L_n-2M_n\le(F-2+\eta_n)M_n,\\
+E_n\le\eta_nM_n,\qquad \log(3/2)\le\eta_nM_n.
+\end{gathered}
+\end{equation}
+Choose $n_0$ so that $V_n\ge2$ and
+\begin{equation}\label{eq:tolerancechoice}
+\eta_n\le\min\left\{\frac{\kappa-(F-2)}2,
+\frac{\kappa}{16(1+\kappa)},
+\frac{\kappa^2}{32(1+\kappa)}\right\}
+\end{equation}
+for $n\ge n_0$. Increase $A$, if necessary, to cover the finitely
+many gaps of $x_{n_0}$.
+
+Induct from $n$ to $n+1$ with Lemma~\ref{lem:perturbation}.
+A bounded gap has width at most $\log6$. An inherited gap has the
+same left endpoint as an old gap and width at most its width plus
+$\log6=C$. Both satisfy \eqref{eq:uniformprofile} at index $n+1$.
+A central gap begins at $a=M_n$ and has width at most
+\[
+L_n-2M_n\le(F-2+\eta_n)M_n\le\kappa a.
+\]
+For the short alternative,
+\[
+g\le2\eta_nM_n,\qquad a\ge(1-2\eta_n)M_n,
+\]
+and \eqref{eq:tolerancechoice} gives $g\le\kappa a$.
+
+For a reflected gap, let $c\to d$ be its old gap and $g_0=d-c$.
+Equations~\eqref{eq:widthandgain} and \eqref{eq:tolerance} give
+\begin{equation}\label{eq:reflectioninduction}
+g\le g_0+2\eta_nM_n,\qquad
+a-c\ge g_0-2\eta_nM_n,\qquad
+a\ge(1-2\eta_n)M_n.
+\end{equation}
+If $g_0<\kappa M_n/4$, then
+\[
+g\le(\kappa/4+2\eta_n)M_n
+\le\kappa(1-2\eta_n)M_n\le\kappa a.
+\]
+If $g_0\ge\kappa M_n/4$, then
+\begin{align*}
+g-\kappa a
+&\le(g_0-\kappa c)-\kappa g_0+(2+2\kappa)\eta_nM_n\\
+&\le(g_0-\kappa c)-\frac{\kappa^2}{4}M_n
++\frac{\kappa^2}{16}M_n
+\le g_0-\kappa c.
+\end{align*}
+Thus the bound for $c\to d$ gives the bound for the new gap without
+loss, and \eqref{eq:uniformprofile} follows.
+
+\section{Transfer to the infinite continued fraction}\label{sec:transfer}
+
+Let $p/q$ be a convergent of $x$ with next denominator $q^+$, and put
+\[
+a=\log q,\qquad b=\log q^+,\qquad \varepsilon=|x-p/q|.
+\]
+Let $q\to\infty$. Gaps with $q^+/q\le6$ are bounded, and their widths
+divided by the left endpoint tend to zero. Thus suppose $q^+/q>6$.
+Choose the least $n\ge n_0$ for which
+\begin{equation}\label{eq:chosentruncation}
+t_n\ge4(a+b+1).
+\end{equation}
+Eventual geometric lower growth gives
+\begin{equation}\label{eq:indexbound}
+n=O(\log(a+b+2)).
+\end{equation}
+Indeed, $t_n\ge c_0\rho^n$ eventually for some $c_0>0$, and minimality gives
+$t_{n-1}<4(a+b+1)$ once $n>n_0$.
+
+The selected $n$ tends to infinity with $q$, since $a+b\to\infty$
+and $t_n\ge4(a+b+1)$.
+By \eqref{eq:reduceddenominator}--\eqref{eq:tail}, for all
+sufficiently large selected indices,
+\begin{equation}\label{eq:transfererror}
+V_n\ge e^{t_n/2}>q,\qquad |x-x_n|\le e^{-t_n}.
+\end{equation}
+On the other hand,
+\[
+\varepsilon\ge\frac1{q(q^++q)}\ge\tfrac12e^{-(a+b)}.
+\]
+Thus $|x-x_n|<\varepsilon/2$. The inequality $V_n>q$ ensures
+$p/q\ne x_n$, and
+\begin{equation}\label{eq:transferlegendre}
+0<\left|x_n-\frac pq\right|
+\le\frac32\varepsilon\le\frac3{2qq^+}<\frac1{2q^2}.
+\end{equation}
+Legendre's criterion makes $p/q$ a nonterminal convergent of $x_n$.
+Let $S$ be the next denominator after $q$ in the continued fraction of
+$x_n$. Then
+\eqref{eq:CFerror} and \eqref{eq:transferlegendre} give
+\[
+S\ge\tfrac23q^+-q\ge q^+/6.
+\]
+By \eqref{eq:uniformprofile} applied to this finite gap,
+\[
+b-a\le\log S-\log q+\log6
+\le\kappa a+A+C(n-n_0)+\log6.
+\]
+By \eqref{eq:indexbound},
+\begin{equation}\label{eq:infiniteprofile}
+b-a\le\kappa a+O(\log(a+b+2)).
+\end{equation}
+The implied constants depend only on $\kappa$ and the series.
+
+If $b\ge2(1+\kappa)a$, then \eqref{eq:infiniteprofile} gives
+$b/2\le O(\log(2b+2))$, which fails for large $b$. Hence $b=O(a)$.
+The term $C(n-n_0)$ in \eqref{eq:uniformprofile} is then $O(\log a)$,
+and the error in \eqref{eq:infiniteprofile} is $O(\log a)=o(a)$.
+Consequently,
+\begin{equation}\label{eq:limitinggap}
+\limsup\frac{b-a}{a}\le\kappa.
+\end{equation}
+
+\section{Completion of the proof}
+
+For an irrational $x$ with convergent denominators $q_m$,
+\eqref{eq:CFerror} gives
+\[
+-\frac{\log|x-p_m/q_m|}{\log q_m}
+=1+\frac{\log q_{m+1}}{\log q_m}+o(1).
+\]
+By Legendre's criterion every reduced approximation with
+$|x-p/q|<1/(2q^2)$ is a convergent; so is every reduced approximation of
+fixed exponent greater than $2$ once $q$ is large.
+In the definition of $\mu$, a pair $(p,q)$ need not be reduced. Reducing it does not increase the denominator, so the same inequality holds. A
+fixed reduced fraction occurs only finitely often among approximations of a
+fixed positive exponent, because its error is nonzero. In a bounded interval
+there are only finitely many reduced fractions with bounded denominator.
+Thus infinitely many such approximations have unbounded reduced
+denominators, and the preceding Legendre argument applies when the
+exponent is greater than $2$.
+Therefore
+\begin{equation}\label{eq:exponentidentity}
+\mu(x)=1+\limsup_m\frac{\log q_{m+1}}{\log q_m}
+=2+\limsup_m\frac{\log(q_{m+1}/q_m)}{\log q_m}.
+\end{equation}
+This holds also when the limsup is infinite.
+Equation~\eqref{eq:limitinggap} gives $\mu(x)\le2+\kappa$.
+Letting $\kappa$ decrease to $F-2$ and using
+\eqref{eq:lowerbound} proves \eqref{eq:main} for finite $F$.
+The infinite case is in Section~\ref{sec:arithmetic}, which completes
+the proof of Theorem~\ref{thm:main}.\qed
+
+\section{Height sharpness and scope}
+
+The coefficient condition cannot be replaced by
+$\log H(\lambda_j)\le C_*u_j$ with any prescribed constant $C_*>0$.
+The first construction below shows this. The second shows that, at one
+fixed linear height scale, the sum can be rational or have
+infinite irrationality exponent.
+In this section index the exponents by $j\ge0$ and take $u_j=2^j$.
+Write $\ell=\log N$.
+
+Fix $0<\theta<1/3$, and set
+\[
+m_j=\lfloor\theta2^j\rfloor,\qquad
+\lambda_j=N^{(-1)^jm_j},\qquad e_j=2^j-(-1)^jm_j.
+\]
+These positive rational weights give
+\[
+\log H(\lambda_j)=m_j\ell=\theta\ell2^j+O(1),\qquad
+x=\sum_{j\ge0}N^{-e_j}.
+\]
+The exponents $e_j$ are strictly increasing. For odd $j$ their
+difference is at least $(1-3\theta)2^j>0$; for even $j$ it is
+$2^j+m_j+m_{j+1}>0$. Their gaps tend to infinity, so the base-$N$
+expansion is not eventually periodic and $x$ is irrational.
+The truncation $p_j/q_j$ through index $j$ has reduced denominator
+$q_j=N^{e_j}$, since its numerator is $1$ modulo $N$, and
+\[
+0<x-p_j/q_j\le\frac{N^{-e_{j+1}}}{1-N^{-1}}
+\le2N^{-e_{j+1}}.
+\]
+Along even indices $e_{j+1}/e_j\to2(1+\theta)/(1-\theta)$, whence
+\begin{equation}\label{eq:sharpheight}
+\mu(x)\ge\frac{2(1+\theta)}{1-\theta}>2.
+\end{equation}
+Choosing $0<\theta<\min\{1/3,C_*/\ell\}$ makes
+$\log H(\lambda_j)\le C_*2^j$ for every $j$.
+
+At the fixed linear height scale below, positive integer weights can give a
+rational sum. Set
+\[
+\lambda_0=N-1,\qquad \lambda_j=N^{2^{j-1}}-1\quad(j\ge1).
+\]
+Then $\lambda_jN^{-2^j}=N^{-2^{j-1}}-N^{-2^j}$ for $j\ge1$, so
+\[
+\sum_{j=0}^m\lambda_jN^{-2^j}=1-N^{-2^m}\longrightarrow1,
+\qquad \log H(\lambda_j)\sim\tfrac12\ell2^j.
+\]
+At the same scale, replace the later weights by
+\[
+\widetilde\lambda_j=N^{2^{j-1}}-1+
+\boldsymbol1_{\{j=r^2\text{ for some }r\ge1\}}\quad(j\ge1),
+\qquad\widetilde\lambda_0=N-1.
+\]
+They remain positive integers, with logarithmic height
+asymptotic to $\tfrac12\ell2^j$. Their sum is
+\[
+\widetilde x=1+\xi_N,\qquad
+\xi_N=\sum_{r\ge1}N^{-2^{r^2}}.
+\]
+The digit expansion shows that $\xi_N$ is irrational. The truncation
+through $r=J$ has reduced denominator
+$q_J=N^{2^{J^2}}$, since its numerator is one modulo $N$, and error
+\[
+0<\xi_N-\sum_{r=1}^JN^{-2^{r^2}}
+\le2N^{-2^{(J+1)^2}}=2q_J^{-2^{2J+1}}.
+\]
+Adding one to each approximant preserves its reduced denominator and its
+approximation error. Thus $\mu(\widetilde x)=+\infty$.
+
+The height condition is sufficient but not necessary for a given series. For example,
+if $b\ge2$ is an integer, the weights
+$\lambda_j=b^{-2^j}$ have logarithmic height $(\log b)2^j$,
+but their sum is $\sum_{j\ge0}(Nb)^{-2^j}$, which has exponent $2$
+by Theorem~\ref{thm:main} with base $Nb$ and unit weights.
+
+Theorem~\ref{thm:main} does not cover
+$\liminf u_{j+1}/u_j<2$. The examples above keep the exponent ratios
+equal to $2$ and vary only the coefficient heights.
+Problem~10.40 in \cite[p.~220]{Bu12} asks for the irrationality exponent
+of binary lacunary sums $\sum_j2^{-n_j}$ for an arbitrary increasing
+lacunary exponent sequence $(n_j)$. For $N=2$, Theorem~\ref{thm:main} gives the exponent when
+$\liminf n_{j+1}/n_j\ge2$, including ratios tending to $2$ from below,
+and allows small rational weights. The case with eventual ratio at least
+$2$ is recorded in \cite{BKS} for unit coefficients, with attribution
+there to Bugeaud's earlier work, and for coefficients $\pm1$ it also
+follows from \cite[Theorem~1]{DKS}. Under the same height hypothesis, the
+subcase $2<\liminf n_{j+1}/n_j\le\limsup n_{j+1}/n_j<\infty$ also follows
+from \cite[Theorem~1]{DKS}.
+
+\section*{Use of AI tools}
+
+The author devised the main argument. Codex (OpenAI, GPT-6 Astra) carried
+out exact checks of the continued-fraction identities and searched the literature.
+Claude Code (Anthropic, Claude Opus 5.5) reviewed the arguments and
+references. The author takes responsibility for the proof and references.
+
+\begin{thebibliography}{99}
+
+\bibitem{AB}
+M.~Amou and Y.~Bugeaud, \emph{Exponents of Diophantine approximation
+and expansions in integer bases}, J. Lond. Math. Soc. (2)
+\textbf{81} (2010), no.~2, 297--316,
+\url{https://doi.org/10.1112/jlms/jdp070}.
+
+\bibitem{Bu08}
+Y.~Bugeaud, \emph{Diophantine approximation and Cantor sets},
+Math. Ann. \textbf{341} (2008), no.~3, 677--684,
+\url{https://doi.org/10.1007/s00208-008-0209-4}.
+
+\bibitem{Bu12}
+Y.~Bugeaud, \emph{Distribution Modulo One and Diophantine Approximation},
+Cambridge Tracts in Mathematics, vol.~193, Cambridge University Press,
+Cambridge, 2012, \url{https://doi.org/10.1017/CBO9781139017732}.
+
+\bibitem{BKS}
+Y.~Bugeaud, D.~Krieger, and J.~Shallit,
+\emph{Morphic and automatic words: maximal blocks and Diophantine
+approximation}, Acta Arith. \textbf{149} (2011), no.~2, 181--199,
+\url{https://doi.org/10.4064/aa149-2-7}.
+
+\bibitem{DKS}
+D.~Duverney, T.~Kurosawa, and I.~Shiokawa,
+\emph{Irrationality exponents of certain fast converging series of
+rational numbers}, Tsukuba J. Math. \textbf{44} (2020), no.~2,
+235--250, \url{https://doi.org/10.21099/tkbjm/20204402235}.
+
+\bibitem{MF}
+M.~Mend\`es France, \emph{Sur les fractions continues limit\'ees},
+Acta Arith. \textbf{23} (1973), no.~2, 207--215,
+\url{https://doi.org/10.4064/aa-23-2-207-215}.
+
+\bibitem{vPS}
+A.~J.~van der Poorten and J.~Shallit, \emph{Folded continued fractions},
+J. Number Theory \textbf{40} (1992), no.~2, 237--250,
+\url{https://doi.org/10.1016/0022-314X(92)90042-N}.
+
+\bibitem{Sh79}
+J.~O.~Shallit, \emph{Simple continued fractions for some irrational
+numbers}, J. Number Theory \textbf{11} (1979), no.~2, 209--217,
+\url{https://doi.org/10.1016/0022-314X(79)90040-4}.
+
+\bibitem{Sh82}
+J.~O.~Shallit, \emph{Simple continued fractions for some irrational
+numbers, II}, J. Number Theory \textbf{14} (1982), no.~2, 228--231,
+\url{https://doi.org/10.1016/0022-314X(82)90047-6}.
+
+\bibitem{Zh}
+R.~Zhang, \emph{The irrationality exponent of small-height binary
+lacunary series is 2}, Zenodo concept record (2026),
+\url{https://doi.org/10.5281/zenodo.24040635}.
+
+\end{thebibliography}
+
+\end{document}
