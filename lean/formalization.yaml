@@ -1,0 +1,110 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "The irrationality exponent of small-height lacunary series"
+  description: >-
+    Let N >= 2 be an integer, let u_1 < u_2 < ... be positive integers with
+    liminf u_{j+1}/u_j >= 2, and let lambda_j be nonzero rational numbers with
+    log H(lambda_j) = o(u_j), where H(a/b) = max(|a|, b) in lowest terms.
+    The series x = sum_j lambda_j N^{-u_j} converges absolutely, is irrational,
+    and has irrationality exponent limsup u_{j+1}/u_j, finite or infinite.
+    The coefficients may have arbitrary signs, and the boundary case
+    liminf u_{j+1}/u_j = 2 is included, with ratios allowed to approach 2 from
+    below. The proof compares continued-fraction denominator gaps of consecutive
+    truncations. A perturbation lemma places each new gap in at least one of
+    five classes: bounded, inherited, central, short, or reflected. The reflected
+    class gives the estimate needed at the boundary ratio 2.
+    This project formalizes the paper's main theorem in Lean 4 with Mathlib.
+  authors:
+    - "Ruiyi Zhang"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Ruiyi Zhang"
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11J82", "11J70", "11B83"]
+
+sources:
+  - title: "The irrationality exponent of small-height lacunary series"
+    authors:
+      - "Ruiyi Zhang"
+    id: "https://doi.org/10.5281/zenodo.24056144"
+    type: "paper"
+    license: "CC-BY-4.0"
+    location: "https://zenodo.org/records/24056144"
+    relationship: "formalizes"
+    note: "The published paper precedes this Lean formalization; the main result is Theorem 1."
+    author_endorsement: "participated"
+
+related_formalizations: []
+
+status:
+  scope: >-
+    The main theorem proves absolute convergence, irrationality, the lower bound
+    2 for the irrationality exponent, and the exact extended-real exponent
+    formula under the paper's full hypotheses, including arbitrary coefficient
+    signs and an infinite limsup. Indices start at zero in Lean. The project's
+    comparator theorem is Paper4.theorem_1 in Solution.lean. `sorry_count` covers
+    the proof; the `sorry` in `Challenge.lean` is the intended statement placeholder.
+    The main theorem uses only propext, Classical.choice, and Quot.sound;
+    no additional axioms are introduced. The sharpness examples and literature
+    comparisons are not asserted as separate formalized results.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Sol 6.1", "Claude Opus 5.5"]
+      framework: "Codex and Claude Code"
+      tool_setup: >-
+        Codex (OpenAI, Sol 6.1) wrote and repaired the Lean proofs under
+        the author's direction; Claude Code (Anthropic, Claude Opus 5.5)
+        reviewed the formalization and the statement alignment.
+      cost:
+        wall_time: "Not tracked as a project-wide total."
+        hardware: "CPU servers; a Google Colab high-memory CPU runtime for the final checks."
+      prompting_notes: >-
+        The author supplied the paper and fixed the target statement. Proof
+        work was split by lemma, with shared interfaces and integration checks.
+  spend_usd: "Not tracked."
+  notes: >-
+    AI models also compared the Lean statement with the paper. This is not
+    peer review.
+
+fidelity:
+  divergences: >-
+    Some intermediate constructions and bounds differ from the paper;
+    RELEASE_NOTES.md lists them.
+
+review:
+  status: "author-verified"
+  reviewers:
+    - "Ruiyi Zhang"
+  notes: >-
+    The author checked the Lean statement against the paper; AI-model
+    readings compared the two as well. A clean Lean build and the axiom check of
+    the main theorem pass, with axioms propext, Classical.choice and Quot.sound.
+    The comparator and nanoda outputs are in verification/, tied to the exact
+    source hashes. The comparator runs were without sandbox. No external peer
+    review is claimed.
+
+alignment:
+  namespace: "Paper4"
+  statements:
+    - source: "Theorem 1 (main theorem)"
+      lean: "Paper4.theorem_1"
+      module: "Solution"
+      status: "proved"
+      note: >-
+        Absolute convergence, irrationality, the exponent lower bound 2, and
+        equality with the extended-real limsup are stated in one conjunction.
+
+acknowledgements: >-
+  The author thanks the Lean and Mathlib contributors.

@@ -1,0 +1,38 @@
+{
+  "state": "PASS",
+  "main_theorem": "Paper4.theorem_1",
+  "source_manifest_sha256": "e71f42661ac37d3cf9903e478c49c2df10434d9ec55ed853ae3e4c218db98d31",
+  "comparator_config_sha256": "543bf1991b6b12a75628860bd84ee1f0200785603c3f87d8e0744ce0cfa5db19",
+  "lean_version": "Lean (version 4.35.0-rc4, x86_64-unknown-linux-gnu, commit c29b6dda4f7c20e3eeaa717c4e565663c5cfa364, Release)",
+  "mathlib_revision": "1f414401f69059aa7eead47b53ee40bd38455eeb",
+  "nanoda_version": "0.4.19",
+  "nanoda_binary_sha256": "cbf13950fc4a48f635a0beceeb5ed32dd82568b870cfd081b6391c1f2cf02ba5",
+  "checked_declarations": 30847,
+  "typechecker_errors": 0,
+  "pretty_printer_errors": 1,
+  "pretty_printer_diagnostic": "Unable to print axioms",
+  "configuration": {
+    "use_stdin": false,
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "unpermitted_axiom_hard_error": true,
+    "unsafe_permit_all_axioms": false,
+    "num_threads": 4,
+    "nat_extension": true,
+    "string_extension": true,
+    "print_success_message": true
+  },
+  "exit_code": 0,
+  "stderr_empty": true,
+  "stdout_sha256": "904b0c8b5de89ac9c923f76bd5d1bb0bf491595ee0deeb62fb301d29836c7d1c",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "export_sha256": "277edcd80718496bb6c6750a49e0175153a8888976d7f7fbb11d101e2dcfd9da",
+  "wall_seconds": 9.101736545562744,
+  "wait4_max_rss_kib": 245656,
+  "sampled_descendant_peak_rss_kib": 210080,
+  "sampling_seconds": 0.1,
+  "sandbox_acceptance": false
+}

@@ -1,0 +1,14 @@
+{
+  "state": "PASS_STATEMENT_AND_FIXED_DEFINITIONS",
+  "main_theorem": "Paper4.theorem_1",
+  "definition_names": [],
+  "challenge_solution_theorem_type_identical": true,
+  "fixed_definition_bodies_identical": [
+    "rationalHeight",
+    "term",
+    "exponentAdmissible",
+    "irrationalityExponent",
+    "exponentRatio"
+  ],
+  "source_manifest_sha256": "e71f42661ac37d3cf9903e478c49c2df10434d9ec55ed853ae3e4c218db98d31"
+}

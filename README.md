@@ -26,7 +26,8 @@ uniform bound at the boundary liminf u_{j+1}/u_j = 2, including ratios that tend
 
 - `main.pdf`: the manuscript (12 pages).
 - `source/main.tex`: LaTeX source (amsart; no other files are needed).
-- `SHA256SUMS`: SHA-256 checksums of the files above.
+- `lean/`: Lean 4 formalization of the main theorem (see below and `lean/README.md`), with its own `SHA256SUMS`.
+- `SHA256SUMS`: SHA-256 checksums of `main.pdf`, `README.md` and `source/main.tex`.
 
 ## Build
 
@@ -34,6 +35,53 @@ uniform bound at the boundary liminf u_{j+1}/u_j = 2, including ratios that tend
     pdflatex main.tex && pdflatex main.tex && pdflatex main.tex
 
 Built with TeX Live 2026.
+
+## Lean formalization
+
+`lean/` contains a Lean 4 formalization of the main theorem (Lean 4.35.0-rc4,
+Mathlib `1f414401`). The formal statement is
+
+```lean
+theorem theorem_1
+    (N : ℕ) (hN : 2 ≤ N)
+    (u : ℕ → ℕ) (hu_pos : ∀ j, 0 < u j) (hu_strict : StrictMono u)
+    (coeff : ℕ → ℚ) (hcoeff : ∀ j, coeff j ≠ 0)
+    (hheight : Tendsto
+      (fun j => Real.log (rationalHeight (coeff j) : ℝ) / (u j : ℝ))
+      atTop (𝓝 0))
+    (hgap : ∀ ε : ℝ, 0 < ε → ∀ᶠ j : ℕ in atTop,
+      2 - ε ≤ exponentRatio u j) :
+    Summable (fun j => |term N u coeff j|) ∧
+      Irrational (∑' j, term N u coeff j) ∧
+      (2 : EReal) ≤ irrationalityExponent (∑' j, term N u coeff j) ∧
+      irrationalityExponent (∑' j, term N u coeff j) =
+        Filter.limsup (fun j => (exponentRatio u j : EReal)) atTop
+```
+
+The proof depends only on the axioms `propext`, `Classical.choice` and
+`Quot.sound`. The independent nanoda kernel accepts the complete proof
+(30,847 declarations), and the Lean kernel accepts it through the comparator
+tool; the receipts are in `lean/verification/`. The saved comparator runs used
+`--inadvisably-no-sandbox`; the sandboxed Palomar verification run
+([42737481615](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/42737481615))
+also accepted the proof.
+
+The formalization follows the structure of the paper:
+
+| part of the proof | Lean modules |
+|---|---|
+| statement and main theorem | `Paper4/Statement.lean`, `Challenge.lean`, `Solution.lean` |
+| rational and irrational continued fractions | `Paper4/CF/` |
+| reversal, perturbation, finite profiles and transfer | `Paper4/HmuSkeleton/` |
+| heights, denominators, tails and truncation approximations | `Paper4/Arithmetic/` |
+| continued-fraction formula for the exponent | `Paper4/Exponent/` |
+
+Some intermediate constructions and bounds differ from the paper;
+`lean/RELEASE_NOTES.md` lists them and explains their effect on the main theorem.
+The formalized theorem retains the full signed coefficient hypotheses and
+includes the finite and infinite exponent cases. Section 9 examples and the
+introductory literature discussion are outside its scope. `lean/README.md`
+explains how to build and check the proof.
 
 ## Citation
 
