@@ -66,6 +66,11 @@ tool; the receipts are in `lean/verification/`. The saved comparator runs used
 ([42737481615](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/42737481615))
 also accepted the proof.
 
+The same Lean package is the root of the `palomar` branch, commit
+[`a1208b6d1c06fd63e1daf90c1342c23a62267742`](https://github.com/ryzfsu/small-height-lacunary-irrationality-exponent/tree/a1208b6d1c06fd63e1daf90c1342c23a62267742),
+whose tree is identical to `lean/`. That commit is registered in the Palomar registry as
+[PALOMAR-2026-11-10-000002](https://palomar-registry.org/entry?id=PALOMAR-2026-11-10-000002).
+
 The formalization follows the structure of the paper:
 
 | part of the proof | Lean modules |
