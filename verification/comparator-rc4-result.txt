@@ -1,0 +1,385 @@
+Resolving dependencies
+Building Challenge
+⚠ [9020/9020] Replayed Challenge
+warning: Challenge.lean:41:8: declaration uses `sorry`
+Build completed successfully (9020 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Paper4.theorem_1, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+⚠ [9025/9065] Replayed Paper4.Arithmetic.Summability
+warning: Paper4/Arithmetic/Summability.lean:61:6: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Paper4/Arithmetic/Summability.lean:20:21: Variable name `hcoeff` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcoeff
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Paper4/Arithmetic/Summability.lean:24:5: Variable name `hgap` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hgap
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ℹ [9028/9065] Replayed Paper4.Exponent.Bridge
+info: Paper4/Exponent/Bridge.lean:134:0: 'Paper4.irrationalityExponent_eq_of_thresholds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/Exponent/Bridge.lean:135:0: 'Paper4.irrationalityExponent_eq_liouville_sSup' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/Exponent/Bridge.lean:220:0: 'Paper4.cfExponentCandidate_le_irrationalityExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9030/9065] Replayed Paper4.Arithmetic.Definitions
+warning: Paper4/Arithmetic/Definitions.lean:141:18: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [9031/9065] Replayed Paper4.CF.Continuants
+info: Paper4/CF/Continuants.lean:663:0: 'Lacunary.Reversal.prefixDenom_splitProfile' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/CF/Continuants.lean:664:0: 'Lacunary.Reversal.prefixDenom_log_close' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/CF/Continuants.lean:665:0: 'Lacunary.Reversal.finiteValue_den' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/CF/Continuants.lean:666:0: 'Lacunary.Reversal.finiteConvergent_den' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/CF/Continuants.lean:667:0: 'Lacunary.Reversal.prefixDenom_folded_reversed_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/CF/Continuants.lean:668:0: 'Lacunary.Reversal.finite_reversal_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/CF/Continuants.lean:669:0: 'Lacunary.Reversal.finiteValue_canonicalReverseWord_eq_previous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [9032/9065] Replayed Paper4.HmuSkeleton.ReversalBridge
+warning: Paper4/HmuSkeleton/ReversalBridge.lean:125:8: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [Nat.add_assoc]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Paper4/HmuSkeleton/ReversalBridge.lean:126:48: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Paper4/HmuSkeleton/ReversalBridge.lean:126:48: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Paper4/HmuSkeleton/ReversalBridge.lean:194:29: Variable name `hden` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hden
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Paper4/HmuSkeleton/ReversalBridge.lean:332:34: This simp argument is unused:
+  List.nil_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [finiteValue]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Paper4/HmuSkeleton/ReversalBridge.lean:581:5: Variable name `hden` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hden
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Paper4/HmuSkeleton/ReversalBridge.lean:709:0: 'Paper4.HmuSkeleton.actual_reverse_gap_recognition' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ReversalBridge.lean:710:0: 'Paper4.HmuSkeleton.actual_reversal_profile_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ReversalBridge.lean:711:0: 'Paper4.HmuSkeleton.actual_reversal_profile_concrete' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ReversalBridge.lean:712:0: 'Paper4.HmuSkeleton.actual_reversal_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ReversalBridge.lean:713:0: 'Paper4.HmuSkeleton.actual_reversal_profile_from_continuants' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9034/9065] Replayed Paper4.HmuSkeleton.SelectedGapTail
+warning: Paper4/HmuSkeleton/SelectedGapTail.lean:57:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Paper4/HmuSkeleton/SelectedGapTail.lean:99:0: 'Paper4.HmuSkeleton.selected_gap_tail_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9035/9065] Replayed Paper4.HmuSkeleton.ScalarTransfer
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:606:0: 'Lacunary.Transfer.log_profile_error_littleO' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:607:0: 'Lacunary.Transfer.log_profile_bootstrap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:608:0: 'Lacunary.Transfer.log_profile_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:609:0: 'Lacunary.Transfer.combine_finite_profile_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:610:0: 'Lacunary.Transfer.log_gap_of_next_denominator' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:611:0: 'Lacunary.Transfer.bounded_log_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:612:0: 'Lacunary.Transfer.geometric_step_of_paper_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:613:0: 'Lacunary.Transfer.geometric_lower_of_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:614:0: 'Lacunary.Transfer.tendsto_scale_of_geometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:615:0: 'Lacunary.Transfer.selectedOffset_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:616:0: 'Lacunary.Transfer.selectedOffset_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:617:0: 'Lacunary.Transfer.selectedOffset_log_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:618:0: 'Lacunary.Transfer.selectedOffset_paper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:619:0: 'Lacunary.Transfer.tendsto_selectedIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:620:0: 'Lacunary.Transfer.tendsto_selectedIndex_paper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:621:0: 'Lacunary.Transfer.paper_scale_strictMono' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:622:0: 'Lacunary.Transfer.paper_scale_geometric_after' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:623:0: 'Lacunary.Transfer.paper_scale_geometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:624:0: 'Lacunary.Transfer.tail_lt_half_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:625:0: 'Lacunary.Transfer.large_denominator_of_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:626:0: 'Lacunary.Transfer.transferred_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:627:0: 'Lacunary.Transfer.transferred_error_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:628:0: 'Lacunary.Transfer.transferred_error_lt_legendre' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:629:0: 'Lacunary.Transfer.next_denominator_of_error_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:630:0: 'Lacunary.Transfer.log_profile_ratio_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:631:0: 'Lacunary.Transfer.log_profile_gap_limsup_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:632:0: 'Lacunary.Transfer.finite_profile_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:633:0: 'Lacunary.Transfer.finite_profile_gap_limsup_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:634:0: 'Lacunary.Transfer.rational_transfer_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ScalarTransfer.lean:635:0: 'Lacunary.Transfer.exponent_upper_of_gap_limsup' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9036/9065] Replayed Paper4.Exponent.CF
+info: Paper4/Exponent/CF.lean:143:0: 'Paper4.irrationalityExponent_eq_cfExponentCandidate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9037/9065] Replayed Paper4.Exponent.Formula
+info: Paper4/Exponent/Formula.lean:64:0: 'Paper4.irrationalityExponent_cf_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/Exponent/Formula.lean:65:0: 'Paper4.two_le_irrationalityExponent_cf' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/Exponent/Formula.lean:66:0: 'Paper4.irrationalityExponent_top_iff_cf_limsup_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/Exponent/Formula.lean:67:0: 'Paper4.irrationalityExponent_cf_formula_toReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9039/9065] Replayed Paper4.Arithmetic.RawTailAdapter
+warning: Paper4/Arithmetic/RawTailAdapter.lean:133:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Paper4/Arithmetic/RawTailAdapter.lean:186:6: Unused tactic linter: `congr 1` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Paper4/Arithmetic/RawTailAdapter.lean:390:0: 'Paper4.master_raw_tail_mul_Q_hmajor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/Arithmetic/RawTailAdapter.lean:391:0: 'Paper4.master_raw_tail_mul_Q_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9041/9065] Replayed Paper4.Arithmetic.GeometricTail
+warning: Paper4/Arithmetic/GeometricTail.lean:44:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9043/9065] Replayed Paper4.Arithmetic.TruncationLower
+warning: Paper4/Arithmetic/TruncationLower.lean:24:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Paper4/Arithmetic/TruncationLower.lean:223:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Paper4/Arithmetic/TruncationLower.lean:223:61: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Paper4/Arithmetic/TruncationLower.lean:288:0: 'Paper4.raw_truncation_lower_of_limsup' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9045/9065] Replayed Paper4.Arithmetic.IntegratedNames
+info: Paper4/Arithmetic/IntegratedNames.lean:47:0: 'Paper4.tail_two_sided' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/Arithmetic/IntegratedNames.lean:48:0: 'Paper4.eventual_tail_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9046/9065] Replayed Paper4.Arithmetic.HneGlue
+info: Paper4/Arithmetic/HneGlue.lean:61:0: 'Paper4.eventual_x_ne_trunc_of_signed_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/Arithmetic/HneGlue.lean:62:0: 'Paper4.eventual_x_ne_trunc_of_tail_interface' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9047/9065] Replayed Paper4.Exponent.FiniteClosure
+info: Paper4/Exponent/FiniteClosure.lean:90:0: 'Paper4.irrationalityExponent_le_of_cf_gap_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/Exponent/FiniteClosure.lean:91:0: 'Paper4.irrationalityExponent_eq_of_cf_profile_and_truncations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [9048/9065] Replayed Paper4.HmuSkeleton.TopBranch
+info: Paper4/HmuSkeleton/TopBranch.lean:55:0: 'Paper4.HmuSkeleton.hmu_top_of_truncation_package' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/TopBranch.lean:56:0: 'Paper4.HmuSkeleton.hmu_top_branch' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9049/9065] Replayed Paper4.HmuSkeleton.InverseCoordinateDeterminant
+info: Paper4/HmuSkeleton/InverseCoordinateDeterminant.lean:53:0: 'Paper4.HmuSkeleton.inverse_coordinate_determinant' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9050/9065] Replayed Paper4.HmuSkeleton.InverseCoordinatePair
+warning: Paper4/HmuSkeleton/InverseCoordinatePair.lean:150:34: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Paper4/HmuSkeleton/InverseCoordinatePair.lean:150:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+info: Paper4/HmuSkeleton/InverseCoordinatePair.lean:308:0: 'Paper4.HmuSkeleton.inverse_coordinate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9051/9065] Replayed Paper4.HmuSkeleton.ReflectedLegendreGap
+info: Paper4/HmuSkeleton/ReflectedLegendreGap.lean:46:0: 'Paper4.HmuSkeleton.reflected_legendre_gap_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9052/9065] Replayed Paper4.HmuSkeleton.PerturbationCases
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:48:26: Variable name `a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:113:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [hg, CFGap.width, CFGap.right, CFGap.left]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:83:5: Variable name `hB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:132:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:325:65: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:421:16: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:496:16: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:421:16: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:496:16: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:455:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:634:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:644:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:655:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:634:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:644:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:655:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:652:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:779:6: Unused tactic linter: `change -Real.log |(δ : ℝ)| - Real.log (α.den : ℝ) - Real.log (3 / 2 : ℝ) ≤ a` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:801:14: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:810:14: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:801:14: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Paper4/HmuSkeleton/PerturbationCases.lean:810:14: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+info: Paper4/HmuSkeleton/PerturbationCases.lean:848:0: 'Paper4.HmuSkeleton.reflected_r_choice_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/PerturbationCases.lean:849:0: 'Paper4.HmuSkeleton.rational_perturbation' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9053/9065] Replayed Paper4.HmuSkeleton.UniformProfile
+warning: Paper4/HmuSkeleton/UniformProfile.lean:29:18: Variable name `hF` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hF
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Paper4/HmuSkeleton/UniformProfile.lean:295:0: 'Paper4.HmuSkeleton.profile_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/UniformProfile.lean:296:0: 'Paper4.HmuSkeleton.profile_all_stages' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/UniformProfile.lean:297:0: 'Paper4.HmuSkeleton.uniform_finite_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9054/9065] Replayed Paper4.HmuSkeleton.CFProfileTransfer
+info: Paper4/HmuSkeleton/CFProfileTransfer.lean:97:0: 'Paper4.HmuSkeleton.actual_cf_gap_profile_limsup_le_of_eventual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Paper4/HmuSkeleton/CFProfileTransfer.lean:98:0: 'Paper4.HmuSkeleton.actual_cf_gap_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/CFProfileTransfer.lean:99:0: 'Paper4.HmuSkeleton.hmu_upper_of_actual_cf_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9055/9065] Replayed Paper4.HmuSkeleton.FinalAssembly
+info: Paper4/HmuSkeleton/FinalAssembly.lean:107:0: 'Paper4.HmuSkeleton.hmu_of_R_packages' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/FinalAssembly.lean:108:0: 'Paper4.HmuSkeleton.final_hmu_assembly_contract' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9056/9065] Replayed Paper4.HmuSkeleton.SelectedProfileClosure
+warning: Paper4/HmuSkeleton/SelectedProfileClosure.lean:37:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [heq] at hpos
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Paper4/HmuSkeleton/SelectedProfileClosure.lean:135:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Paper4/HmuSkeleton/SelectedProfileClosure.lean:178:0: 'Paper4.HmuSkeleton.selected_rational_gap_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/SelectedProfileClosure.lean:179:0: 'Paper4.HmuSkeleton.actual_profile_of_finite_profiles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/SelectedProfileClosure.lean:180:0: 'Paper4.HmuSkeleton.finite_profiles_of_rational_perturbation' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9057/9065] Replayed Paper4.HmuSkeleton.SeriesProfileClosure
+info: Paper4/HmuSkeleton/SeriesProfileClosure.lean:125:0: 'Paper4.HmuSkeleton.series_tail_exp_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/SeriesProfileClosure.lean:126:0: 'Paper4.HmuSkeleton.series_cf_profile_of_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9058/9065] Replayed Paper4.HmuSkeleton.StepScales
+warning: Paper4/HmuSkeleton/StepScales.lean:67:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Paper4/HmuSkeleton/StepScales.lean:85:13: Variable name `hF2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hF2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Paper4/HmuSkeleton/StepScales.lean:107:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Paper4/HmuSkeleton/StepScales.lean:107:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Paper4/HmuSkeleton/StepScales.lean:146:0: 'Paper4.HmuSkeleton.step_next_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/StepScales.lean:147:0: 'Paper4.HmuSkeleton.exponentRatio_eventually_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/StepScales.lean:148:0: 'Paper4.HmuSkeleton.step_scale_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/StepScales.lean:149:0: 'Paper4.HmuSkeleton.step_bounds_of_reduced_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9059/9065] Replayed Paper4.HmuSkeleton.CoordinateSmall
+warning: Paper4/HmuSkeleton/CoordinateSmall.lean:119:21: Variable name `hc` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Paper4/HmuSkeleton/CoordinateSmall.lean:175:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: Paper4/HmuSkeleton/CoordinateSmall.lean:194:0: 'Paper4.HmuSkeleton.profile_height_sum_div_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/CoordinateSmall.lean:195:0: 'Paper4.HmuSkeleton.shifted_small_of_finite_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/CoordinateSmall.lean:196:0: 'Paper4.HmuSkeleton.deficit_div_u_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/CoordinateSmall.lean:197:0: 'Paper4.HmuSkeleton.coordinate_small_of_bound_and_reduced_scale' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [9060/9065] Replayed Paper4.HmuSkeleton.ArithmeticPackage
+info: Paper4/HmuSkeleton/ArithmeticPackage.lean:59:0: 'Paper4.HmuSkeleton.seriesProfileArithmetic_of_reduced_scale_and_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Paper4/HmuSkeleton/ArithmeticPackage.lean:61:0: 'Paper4.HmuSkeleton.series_cf_profile_of_reduced_scale_and_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [9061/9065] Replayed Paper4.HmuSkeleton.CoordinateBound
+info: Paper4/HmuSkeleton/CoordinateBound.lean:121:0: 'Paper4.HmuSkeleton.coordinate_den_trunc_delta_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/CoordinateBound.lean:122:0: 'Paper4.HmuSkeleton.coordinate_den_trunc_delta_height_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9062/9065] Replayed Paper4.HmuSkeleton.ReducedScaleClosure
+info: Paper4/HmuSkeleton/ReducedScaleClosure.lean:51:0: 'Paper4.HmuSkeleton.seriesProfileArithmetic_of_reduced_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Paper4/HmuSkeleton/ReducedScaleClosure.lean:52:0: 'Paper4.HmuSkeleton.series_cf_profile_of_reduced_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9063/9065] Replayed Paper4.HmuSkeleton.ReducedScale
+warning: Paper4/HmuSkeleton/ReducedScale.lean:137:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Paper4/HmuSkeleton/ReducedScale.lean:129:13: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Paper4/HmuSkeleton/ReducedScale.lean:194:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Paper4/HmuSkeleton/ReducedScale.lean:258:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: Paper4/HmuSkeleton/ReducedScale.lean:431:0: 'Paper4.HmuSkeleton.reduced_scale_actual' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9064/9065] Replayed Paper4.HmuSkeleton.FinalProfile
+info: Paper4/HmuSkeleton/FinalProfile.lean:44:0: 'Paper4.HmuSkeleton.actual_cf_profile_of_paper' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9065/9065] Replayed Solution
+info: Solution.lean:125:0: 'Paper4.theorem_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (9065 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Paper4.theorem_1, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
