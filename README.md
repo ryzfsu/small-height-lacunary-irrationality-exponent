@@ -4,6 +4,8 @@ Ruiyi Zhang
 
 DOI: [10.5281/zenodo.24056144](https://doi.org/10.5281/zenodo.24056144)
 
+Lean (Palomar): [PALOMAR-2026-11-10-000002](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-10-000002)
+
 ## Main result
 
 Let N >= 2 be an integer, let u_1 < u_2 < ... be positive integers with liminf u_{j+1}/u_j >= 2, and let
